@@ -49,11 +49,11 @@ public sealed class AppController
                     break;
                 case 2:
                     _menuView.ShowInfo("Sterowanie",
-                        "Strzałki  – ruch kursora\n" +
-                        "Enter/Spacja – odkryj pole\n" +
-                        "F        – flaga\n" +
-                        "R        – nowa gra (ten sam poziom)\n" +
-                        "Esc      – powrót do menu");
+                        "Strzałki / WASD – ruch kursora\n" +
+                        "Enter / Spacja / LPM – odkryj pole\n" +
+                        "F / PPM – flaga\n" +
+                        "R – nowa gra (ten sam poziom)\n" +
+                        "Esc – powrót do menu");
                     break;
                 case 3:
                     return;

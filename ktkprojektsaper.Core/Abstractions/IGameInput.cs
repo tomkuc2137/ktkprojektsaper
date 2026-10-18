@@ -14,4 +14,10 @@ public interface IGameInput
     /// Usuwa zalegające klawisze (np. Enter z menu albo sekwencje po Clear).
     /// </summary>
     void Flush();
+
+    /// <summary>
+    /// Gdy akcja pochodzi z kliknięcia myszy – zwraca cel absolutny na planszy.
+    /// Konsola zwraca false (tylko kursor + klawiatura).
+    /// </summary>
+    bool TryConsumeCellTarget(out int x, out int y);
 }

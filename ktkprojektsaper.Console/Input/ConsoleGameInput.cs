@@ -17,6 +17,13 @@ public sealed class ConsoleGameInput : IGameInput
         }
     }
 
+    public bool TryConsumeCellTarget(out int x, out int y)
+    {
+        x = 0;
+        y = 0;
+        return false;
+    }
+
     public GameInputAction ReadGameAction(TimeSpan? timeout = null)
     {
         var deadline = timeout is null

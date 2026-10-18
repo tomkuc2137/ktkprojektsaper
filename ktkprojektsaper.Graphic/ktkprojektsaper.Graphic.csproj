@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>ktkprojektsaper.Graphic</RootNamespace>
+        <StartupObject>ktkprojektsaper.Graphic.Program</StartupObject>
+        <!-- Wyłącz auto-Main z App.xaml, żeby nie było dwóch punktów wejścia. -->
+        <DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ktkprojektsaper.Core\ktkprojektsaper.Core.csproj" />
+    </ItemGroup>
+
+</Project>

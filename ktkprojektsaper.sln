@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ktkprojektsaper.Core", "ktk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ktkprojektsaper.Console", "ktkprojektsaper.Console\ktkprojektsaper.Console.csproj", "{A32DC043-0838-4480-B8B3-6901F6390AD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ktkprojektsaper.Graphic", "ktkprojektsaper.Graphic\ktkprojektsaper.Graphic.csproj", "{F4CA0851-6072-4B9B-9206-B5A6D747B802}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A32DC043-0838-4480-B8B3-6901F6390AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A32DC043-0838-4480-B8B3-6901F6390AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32DC043-0838-4480-B8B3-6901F6390AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4CA0851-6072-4B9B-9206-B5A6D747B802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4CA0851-6072-4B9B-9206-B5A6D747B802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4CA0851-6072-4B9B-9206-B5A6D747B802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4CA0851-6072-4B9B-9206-B5A6D747B802}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

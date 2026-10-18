@@ -53,9 +53,11 @@ public sealed class GameController
                     MoveCursor(1, 0);
                     break;
                 case GameInputAction.Reveal:
+                    ApplyPointerTargetIfAny();
                     HandleReveal();
                     break;
                 case GameInputAction.ToggleFlag:
+                    ApplyPointerTargetIfAny();
                     HandleFlag();
                     break;
                 case GameInputAction.Restart:
@@ -83,6 +85,26 @@ public sealed class GameController
         var previous = ToCellView(prevX, prevY, isCursor: false);
         var current = ToCellView(_game.CursorX, _game.CursorY, isCursor: true);
         _view.UpdateCursor(previous, current);
+    }
+
+    private void ApplyPointerTargetIfAny()
+    {
+        if (!_input.TryConsumeCellTarget(out var x, out var y))
+            return;
+
+        if (_game.Status is GameStatus.Won or GameStatus.Lost)
+            return;
+
+        var prevX = _game.CursorX;
+        var prevY = _game.CursorY;
+        _game.SetCursor(x, y);
+
+        if (prevX == _game.CursorX && prevY == _game.CursorY)
+            return;
+
+        _view.UpdateCursor(
+            ToCellView(prevX, prevY, isCursor: false),
+            ToCellView(_game.CursorX, _game.CursorY, isCursor: true));
     }
 
     private void HandleReveal()
