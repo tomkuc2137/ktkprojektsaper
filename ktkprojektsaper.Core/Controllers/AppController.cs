@@ -58,8 +58,6 @@ public sealed class AppController
                 case 3:
                     return;
                 case -1:
-                    // Esc w menu głównym – pytamy ponownie zamiast od razu zamykać
-                    // (unikamy zamknięcia przez śmieci w buforze po Clear).
                     continue;
             }
         }

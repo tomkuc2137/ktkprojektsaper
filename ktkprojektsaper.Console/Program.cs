@@ -11,13 +11,11 @@ if (OperatingSystem.IsWindows())
 {
     try
     {
-        // Rider / małe okno: bez większego bufora plansza wychodzi poza zakres kursora.
         if (Console.BufferWidth < 100 || Console.BufferHeight < 40)
             Console.SetBufferSize(Math.Max(Console.BufferWidth, 100), Math.Max(Console.BufferHeight, 40));
     }
     catch
     {
-        // Nie każda konsola pozwala na zmianę rozmiaru.
     }
 }
 

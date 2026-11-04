@@ -4,9 +4,6 @@ using ktkprojektsaper.Core.Services;
 
 namespace ktkprojektsaper.Core.Controllers;
 
-/// <summary>
-/// Kontroler partii gry – łączy model z widokiem, bez zależności od konsoli.
-/// </summary>
 public sealed class GameController
 {
     private readonly IGameView _view;
@@ -21,14 +18,10 @@ public sealed class GameController
         _scoreStore = scoreStore;
         _game = new GameModel(difficulty);
     }
-
-    /// <summary>
-    /// Pętla gry. Zwraca true, jeśli użytkownik chce wrócić do menu.
-    /// </summary>
+    
     public bool Run()
     {
         DrawFullBoard();
-        // Enter z menu / śmieci po Clear nie mogą od razu zamknąć partii.
         _input.Flush();
 
         while (true)

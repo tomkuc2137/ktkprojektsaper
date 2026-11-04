@@ -3,9 +3,6 @@ using ktkprojektsaper.Core.Models;
 
 namespace ktkprojektsaper.Console.Views;
 
-/// <summary>
-/// Widok konsolowy z częściowym odświeżaniem – rysuje tylko zmienione komórki / HUD.
-/// </summary>
 public sealed class ConsoleGameView : IGameView
 {
     private const int CellWidth = 2;
@@ -207,7 +204,6 @@ public sealed class ConsoleGameView : IGameView
         }
         catch (IOException)
         {
-            // Konsola IDE może nie pozwalać na zmianę rozmiaru.
         }
         catch (ArgumentOutOfRangeException)
         {

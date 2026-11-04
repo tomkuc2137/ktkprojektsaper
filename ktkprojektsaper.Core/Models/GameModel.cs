@@ -52,10 +52,7 @@ public sealed class GameModel
         CursorX = x;
         CursorY = y;
     }
-
-    /// <summary>
-    /// Odkrywa pole. Zwraca listę zmienionych współrzędnych (do częściowego odświeżenia widoku).
-    /// </summary>
+    
     public IReadOnlyList<(int X, int Y)> RevealAtCursor()
     {
         return Reveal(CursorX, CursorY);
@@ -101,10 +98,7 @@ public sealed class GameModel
 
         return changed;
     }
-
-    /// <summary>
-    /// Przełącza flagę. Zwraca zmienione pole lub pustą listę.
-    /// </summary>
+    
     public IReadOnlyList<(int X, int Y)> ToggleFlagAtCursor()
     {
         if (Status is GameStatus.Won or GameStatus.Lost)
